@@ -2,10 +2,10 @@ function b() {
     console.log('Called b!');
 }
 
-b();
+b();// Called b!
 
-console.log(a);
+console.log(a);//undefined
 
 var a = 'Hello World!';
 
-console.log(a);
+console.log(a);//Hello World!
