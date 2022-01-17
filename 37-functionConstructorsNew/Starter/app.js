@@ -19,4 +19,3 @@ function Student(firstname, lastname) {
 
 var homero = new Student("Homero", "Simpson");
 console.log(homero);//Student {firstname: 'Homero', lastname: 'Simpson'}
-
