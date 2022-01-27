@@ -1,4 +1,4 @@
-S2 - Conceptual Aside
+# JavaScript: Understanding the weird parts
 
 **Syntax parsers**: Evalúa la sintaxis de tu código antes de procesarlo.
 Es decir, lee el código y determina si lo ejecuta y si su gramática es
