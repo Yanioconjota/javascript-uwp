@@ -1,4 +1,4 @@
-#JavaScript: Understanding the weird parts
+# JavaScript: Understanding the weird parts
 
 **Syntax parsers**: Evalúa la sintaxis de tu código antes de procesarlo. Es decir, lee el código y determina si lo ejecuta y si su gramática es válida. 
 
@@ -8,4 +8,5 @@
 
 **Objeto**: En JavaScript son colecciones de parejas name/value.
 
-![objeto](images/image001.jpg)
+[img1]:http://www.janioisacura.com/images/jswp/image001.jpg
+![objeto](http://www.janioisacura.com/images/jswp/image001.jpg)
