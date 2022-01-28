@@ -878,3 +878,54 @@ combinarse con herencia por prototipo.
 
 **Syntactic Sugar**: una forma diferente de escribir código, que no
 cambia la forma en que funciona.
+
+**typeof / instanceof**:
+
+![](http://janioisacura.com/pics/jswp/image154.jpg)
+
+**_¿Por qué la variable d es del tipo objeto?_**
+
+Porque para JS los arrays son objetos, pero como se puede observar en la
+línea 12, se puede obtener el tipo array de un array, hay que ir
+directamente al objeto global en la cadena de prototipo y aplicarle el
+método toString y a través del método call le decimos que apunte a la
+variable d para verificar que es del tipo array, esto nos devuelve un
+string entre corchetes con la palabra array.
+
+**Strict mode**: "use strict" se utiliza para hacer a JS un poco menos
+flexible, haciendo que todas las variables deban ser declaradas.
+
+![](http://janioisacura.com/pics/jswp/image155.jpg)
+
+La variable person que fue declarada y en teoría se le asignaba un
+objeto vacío, pero al cometer el error, accidentalmente creamos 2
+variables distintas, la primera person es undefined y persom un objeto
+vacío, esto puede evitarse agregando "use strict" al principio de
+nuestro código, para que de esa manera nos indique por ejemplo cuando
+olvidemos declarar una variable, como en el ejemplo anterior.
+
+![](http://janioisacura.com/pics/jswp/image156.jpg)
+![](http://janioisacura.com/pics/jswp/image157.jpg)
+
+Tal y como podemos ver, nos obliga a mirar el error, ya que persom nunca
+fue declarada.
+
+![](http://janioisacura.com/pics/jswp/image158.jpg)
+![](http://janioisacura.com/pics/jswp/image159.jpg)
+
+"use strict" también tiene su contexto de ejecución, si lo colocamos al
+principio de nuestro código, se aplicará para todo el archivo, pero si
+lo incluimos dentro de una función solo será aplicable dentro de ese
+bloque de código, el primer console.log nos devuelve el objeto vacío del
+error de persom pero la ejecución de logNewPerson si nos muestra el
+error porque el strict mode está en su contexto de ejecución.
+
+El strict mode no es necesariamente mandatorio, es un opcional, ya que
+no siempre queremos aplicar sus reglas a nuestra aplicación. También es
+importante destacar que si tenemos varios archivos de JS separados y
+sucede que uno de ellos tiene aplicado el "use strict", todos los
+archivos siguientes en la compilación tendrán aplicado el strict mode
+también.
+
+[Mas info sobre strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
