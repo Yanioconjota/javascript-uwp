@@ -75,6 +75,30 @@
       this.validate();
 
       return this;
+    },
+    HTMLgreeting: function(selector, formal) {
+      //Valida que exista jQuery
+      if(!$) {
+        throw 'jQuery not loaded!'
+      }
+      //Valida que exista un selector de jQuery válido
+      if (!selector) {
+        throw 'Missing jQuery selector'
+      }
+
+      var msg;
+      if (formal) {
+        msg = this.formalGreetings();
+      }
+      else {
+        msg = this.greetings();
+      }
+      
+      //Le asignamos el mensaje al string que recibimos como selector.
+      $(selector).html(msg);
+      
+      //Hacemos el método encadenable
+      return this;
     }
   };
 
