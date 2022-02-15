@@ -8,4 +8,14 @@ g.greet().setLang('es').greet(true);//Hello Homero!
 g.greet().setLang('en').log();//Logged in: Homero Thompson
 */
 
-var g = G$("Homero", "Thompson");
+$('#login').bind('click', function(){
+
+  var firstName = $("#firstName").val();
+  var lastName = $("#lastName").val(); 
+  var lang = $("#lang").val();
+  var formal = $("#formal").is(":checked");
+
+  var g = G$(firstName, lastName);
+
+  g.setLang(lang).HTMLgreeting("#greeting", formal).log();
+});

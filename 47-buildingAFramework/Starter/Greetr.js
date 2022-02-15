@@ -7,21 +7,24 @@
 
   //Variables que no están expuesta pero es accesible a todo el lexical environment de la función a través del closure
 
-  var supportedLangs = ['en', 'es'];
+  var supportedLangs = ['en', 'es', 'jp'];
 
   var greetings = {
-    en: 'Hello',
-    es: 'Hola'
+    en: "Hello",
+    es: "Hola",
+    jp: "こんにちは - Kon'nichiwa",
   };
 
   var formalGreetings = {
-    en: 'Greetings',
-    es: 'Saludos'
+    en: "Greetings",
+    es: "Saludos",
+    jp: "ご挨拶 - Go aisatsu",
   };
 
   var loggedMessages = {
-    en: 'Logged in',
-    es: 'Inició sesión'
+    en: "Logged in",
+    es: "Inició sesión",
+    jp: "ログイン - Roguin",
   };
 
   //En el prototype guardo todos los métodos que voy a usar en el framework

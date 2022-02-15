@@ -1,12 +1,22 @@
 <html>
-<head></head>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
   <div id="logindiv">
+    <div>
+      <input type="text" id="firstName" name="firstName" placeholder="firstname: ">
+      <input type="text" id="lastName" name="lastName" placeholder="lasttname: ">
+    </div>
+
     <select id="lang">
       <option value="en">English</option>
       <option value="es">Spanish</option>
+      <option value="jp">Japanese</option>
     </select>
+    <input type="checkbox" id="formal" name="formal">
+    <label for="formal">Formal</label>
     <input type="button" value="Login" id="login">
   </div>
   <h1 id="greeting"></h1>
