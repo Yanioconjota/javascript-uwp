@@ -1,4 +1,5 @@
-(function (global, $) {
+//; al princpio se agrega por si el código anterior en el html no se cierra propiamente
+;(function (global, $) {
   var Greetr = function (firstName, lastName, language) {
     //Devuelvo un function constructor con el operador new para asegurarme que al invocar Greetr no tenga que usarlo de nuevo
     return new Greetr.init(firstName, lastName, language);
@@ -96,7 +97,7 @@
       
       //Le asignamos el mensaje al string que recibimos como selector.
       $(selector).html(msg);
-      
+
       //Hacemos el método encadenable
       return this;
     }
@@ -109,6 +110,8 @@
     self.firstName = firstName || "";
     self.lastName = lastName || "";
     self.language = language || "en";
+
+    self.validate();
   };
 
   //Todos los objetos creados con init apuntan al prototype de Greetr
