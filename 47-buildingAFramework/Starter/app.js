@@ -17,5 +17,9 @@ $('#login').bind('click', function(){
 
   var g = G$(firstName, lastName);
 
-  g.setLang(lang).HTMLgreeting("#greeting", formal).log();
+  if (firstName === "" || lastName === "") {
+    g.errMessage("#greeting");
+  } else {
+    g.setLang(lang).HTMLgreeting("#greeting", formal).log();
+  }
 });

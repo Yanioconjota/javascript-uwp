@@ -48,13 +48,12 @@
       return formalGreetings[this.language] + ", " + this.fullName();
     },
     //es el método que vamos a utilizar y encapsula la lógica anterior
-    greet: function(formal) {
+    greet: function (formal) {
       var msg;
       //si es null o undefined será coercionado a false
       if (formal) {
         msg = this.formalGreetings();
-      }
-      else {
+      } else {
         msg = this.greetings();
       }
       if (console) {
@@ -65,7 +64,7 @@
       return this;
     },
     //si hay una consola muestra un mensaje
-    log: function() {
+    log: function () {
       if (console) {
         console.log(`${loggedMessages[this.language]}: ${this.fullName()}`);
       }
@@ -73,37 +72,49 @@
       return this;
     },
     //Cambia el idioma en ejecución
-    setLang: function(lang) {
+    setLang: function (lang) {
       this.language = lang;
 
       this.validate();
 
       return this;
     },
-    HTMLgreeting: function(selector, formal) {
+    HTMLgreeting: function (selector, formal) {
       //Valida que exista jQuery
-      if(!$) {
-        throw 'jQuery not loaded!'
+      if (!$) {
+        throw "jQuery not loaded!";
       }
       //Valida que exista un selector de jQuery válido
       if (!selector) {
-        throw 'Missing jQuery selector'
+        throw "Missing jQuery selector";
       }
 
       var msg;
       if (formal) {
         msg = this.formalGreetings();
-      }
-      else {
+      } else {
         msg = this.greetings();
       }
-      
+
       //Le asignamos el mensaje al string que recibimos como selector.
       $(selector).html(msg);
 
       //Hacemos el método encadenable
       return this;
-    }
+    },
+    errMessage: function (selector) {
+      //Valida que exista jQuery
+      if (!$) {
+        throw "jQuery not loaded!";
+      }
+      //Valida que exista un selector de jQuery válido
+      if (!selector) {
+        throw "Missing jQuery selector";
+      }
+      
+      msg = "You must type something";
+      $(selector).html(msg);
+    },
   };
 
   //Esta es la verdadera función y asigno valores por defecto
