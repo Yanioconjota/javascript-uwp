@@ -1,2 +1,5 @@
+//1 - creo una variable y le asigno la ejecución de mi alias de Greetr 
 var g = G$('Homero', 'Thompson');
-console.log(g);
+//2 - invoco el método saludar encadenándole distintas ejecuciiones
+g.greet().setLang('es').greet(true);//Hello Homero!
+//g.setLang('gr').greet();//Uncaught Invalid language
